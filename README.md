@@ -10,6 +10,10 @@ I'm not sure why...
 
 Below here is Conceptual Structure of each DeepLearning model (I know LightGBM is not a DeepLearning model but CNN and LSTM are kinda DeepLearning models, let's be cool with this)
 
+also i use `Optuna` for hyperparameter optimization, and you can split up the training and validation periods (like with `validation_split` in yml and all that).
+
+The validation period stuff gets saved as a CSV too.
+
 ```
 These codes are actually functional, but I've edited some parts as they're intended for conceptual understanding.
 
