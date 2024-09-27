@@ -1,6 +1,6 @@
 # DeepLearning_Conceptual
 
-> Fuckin compiler error wont shut up in `./src/cnn_model.py` and `./src/lstm_model.py`
+> Fuckin compiler error wont shut up in `./src/Model/cnn_model.py` and `./src/Model/lstm_model.py`
 >
 > That is why there is fuckin `# type: ignore` in every tensorflow.keras import
 
