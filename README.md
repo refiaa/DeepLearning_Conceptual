@@ -2,7 +2,7 @@
 
 > Fuckin compiler error wont shut up in `./src/Model/cnn_model.py` and `./src/Model/lstm_model.py`
 >
-> That is why there is fuckin `# type: ignore` in every tensorflow.keras import
+> That is why there is fuckin `# type: ignore` in every `tensorflow.keras` import
 
 Somehow, things have been miraculously working.
 
@@ -28,4 +28,4 @@ You can make these codes fully operational by fixing them yourself and obtaining
 ## LSTM
 ![Layer LSTM](./img/layer_lstm.svg)
 
-*images are also conceptual so actually there is some error.im too lazy to fix it*
+*images are also conceptual so actually there is some error. but im too lazy to fix it*
