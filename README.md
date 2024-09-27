@@ -28,4 +28,4 @@ You can make these codes fully operational by fixing them yourself and obtaining
 ## LSTM
 ![Layer LSTM](./img/layer_lstm.svg)
 
-*images are also conceptual so actually there is some error.*
+*images are also conceptual so actually there is some error.im too lazy to fix it*
