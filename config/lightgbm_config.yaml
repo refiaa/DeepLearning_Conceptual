@@ -1,0 +1,22 @@
+data:
+  input_file: ''
+  output_dir: ''
+  features:
+  target:
+  categorical_features:
+
+model:
+  type: 'LGBMRegressor'
+  params:
+    objective: 'regression'
+    metric: 'rmse'
+    num_leaves: 31
+    learning_rate: 0.05
+    n_estimators: 1000
+    max_depth: -1
+    subsample: 0.8
+    colsample_bytree: 0.8
+
+training:
+  early_stopping_rounds: 50
+  verbose_eval: 100

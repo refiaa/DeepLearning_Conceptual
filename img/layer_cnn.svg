@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#f0f0f0"/>
+  
+  <!-- 入力層 -->
+  <circle cx="50" cy="300" r="20" fill="#ffcccc"/>
+  <text x="50" y="340" font-size="12" text-anchor="middle" style="font-weight: bold;">Input</text>
+  
+  <!-- Layer 1: First Conv1D -->
+  <circle cx="150" cy="200" r="20" fill="#ccffcc"/>
+  <circle cx="150" cy="300" r="20" fill="#ccffcc"/>
+  <circle cx="150" cy="400" r="20" fill="#ccffcc"/>
+  <text x="150" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Conv1D</text>
+  <text x="150" y="455" font-size="9" text-anchor="middle">Layer1</text>
+
+  <!-- Layer 2: First BatchNorm -->
+  <circle cx="250" cy="200" r="20" fill="#ccccff"/>
+  <circle cx="250" cy="300" r="20" fill="#ccccff"/>
+  <circle cx="250" cy="400" r="20" fill="#ccccff"/>
+  <text x="250" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">BatchNorm</text>
+  <text x="250" y="455" font-size="9" text-anchor="middle">Layer2</text>
+  
+  <!-- Layer 3: Second Conv1D -->
+  <circle cx="350" cy="200" r="20" fill="#ccffcc"/>
+  <circle cx="350" cy="300" r="20" fill="#ccffcc"/>
+  <circle cx="350" cy="400" r="20" fill="#ccffcc"/>
+  <text x="350" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Conv1D</text>
+  <text x="350" y="455" font-size="9" text-anchor="middle">Layer3</text>
+
+  <!-- Layer 4: Second BatchNorm -->
+  <circle cx="450" cy="200" r="20" fill="#ccccff"/>
+  <circle cx="450" cy="300" r="20" fill="#ccccff"/>
+  <circle cx="450" cy="400" r="20" fill="#ccccff"/>
+  <text x="450" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">BatchNorm</text>
+  <text x="450" y="455" font-size="9" text-anchor="middle">Layer4</text>
+
+  <!-- Layer 5: Third Conv1D -->
+  <circle cx="550" cy="200" r="20" fill="#ccffcc"/>
+  <circle cx="550" cy="300" r="20" fill="#ccffcc"/>
+  <circle cx="550" cy="400" r="20" fill="#ccffcc"/>
+  <text x="550" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Conv1D</text>
+  <text x="550" y="455" font-size="9" text-anchor="middle">Layer5</text>
+
+  <!-- Layer 6: Third BatchNorm -->
+  <circle cx="650" cy="200" r="20" fill="#ccccff"/>
+  <circle cx="650" cy="300" r="20" fill="#ccccff"/>
+  <circle cx="650" cy="400" r="20" fill="#ccccff"/>
+  <text x="650" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">BatchNorm</text>
+  <text x="650" y="455" font-size="9" text-anchor="middle">Layer6</text>
+
+  <!-- Layer 7: MaxPooling1D -->
+  <circle cx="750" cy="250" r="20" fill="#ffffcc"/>
+  <circle cx="750" cy="350" r="20" fill="#ffffcc"/>
+  <text x="750" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">MaxPooling1D</text>
+  <text x="750" y="455" font-size="9" text-anchor="middle">Layer7</text>
+
+  <!-- Layer 8: First Dropout -->
+  <circle cx="850" cy="250" r="20" fill="#ffccff"/>
+  <circle cx="850" cy="350" r="20" fill="#ffccff" opacity="0.5"/>
+  <text x="850" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Dropout</text>
+  <text x="850" y="455" font-size="9" text-anchor="middle">Layer8</text>
+
+  <!-- Layer 9: Flatten -->
+  <rect x="920" y="280" width="40" height="40" fill="#ffddcc"/>
+  <text x="940" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Flatten</text>
+  <text x="940" y="455" font-size="9" text-anchor="middle">Layer9</text>
+
+  <!-- Layer 10: First Dense -->
+  <circle cx="1000" cy="250" r="20" fill="#ffddaa"/>
+  <circle cx="1000" cy="300" r="20" fill="#ffddaa"/>
+  <circle cx="1000" cy="350" r="20" fill="#ffddaa"/>
+  <text x="1000" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Dense</text>
+  <text x="1000" y="455" font-size="9" text-anchor="middle">Layer10</text>
+
+  <!-- Layer 11: Second Dropout -->
+  <circle cx="1080" cy="250" r="20" fill="#ffccff"/>
+  <circle cx="1080" cy="300" r="20" fill="#ffccff" opacity="0.5"/>
+  <circle cx="1080" cy="350" r="20" fill="#ffccff"/>
+  <text x="1080" y="440" font-size="12" text-anchor="middle" style="font-weight: bold;">Dropout</text>
+  <text x="1080" y="455" font-size="9" text-anchor="middle">Layer11</text>
+
+  <!-- Layer 12: Output Dense -->
+  <circle cx="1160" cy="300" r="20" fill="#ccffff"/>
+  <text x="1160" y="340" font-size="12" text-anchor="middle" style="font-weight: bold;">Output</text>
+  
+  <!-- 連結線 -->
+  <g stroke="black" stroke-width="1" fill="none">
+    <!-- 入力 to Conv1D -->
+    <line x1="70" y1="300" x2="130" y2="200"/>
+    <line x1="70" y1="300" x2="130" y2="300"/>
+    <line x1="70" y1="300" x2="130" y2="400"/>
+    
+    <!-- Conv1D to BatchNorm (全ての連結) -->
+    <line x1="170" y1="200" x2="230" y2="200"/>
+    <line x1="170" y1="200" x2="230" y2="300"/>
+    <line x1="170" y1="200" x2="230" y2="400"/>
+    <line x1="170" y1="300" x2="230" y2="200"/>
+    <line x1="170" y1="300" x2="230" y2="300"/>
+    <line x1="170" y1="300" x2="230" y2="400"/>
+    <line x1="170" y1="400" x2="230" y2="200"/>
+    <line x1="170" y1="400" x2="230" y2="300"/>
+    <line x1="170" y1="400" x2="230" y2="400"/>
+    
+    <!-- BatchNorm to Conv1D (全ての連結) -->
+    <line x1="270" y1="200" x2="330" y2="200"/>
+    <line x1="270" y1="200" x2="330" y2="300"/>
+    <line x1="270" y1="200" x2="330" y2="400"/>
+    <line x1="270" y1="300" x2="330" y2="200"/>
+    <line x1="270" y1="300" x2="330" y2="300"/>
+    <line x1="270" y1="300" x2="330" y2="400"/>
+    <line x1="270" y1="400" x2="330" y2="200"/>
+    <line x1="270" y1="400" x2="330" y2="300"/>
+    <line x1="270" y1="400" x2="330" y2="400"/>
+    
+    <!-- Conv1D to BatchNorm (全ての連結) -->
+    <line x1="370" y1="200" x2="430" y2="200"/>
+    <line x1="370" y1="200" x2="430" y2="300"/>
+    <line x1="370" y1="200" x2="430" y2="400"/>
+    <line x1="370" y1="300" x2="430" y2="200"/>
+    <line x1="370" y1="300" x2="430" y2="300"/>
+    <line x1="370" y1="300" x2="430" y2="400"/>
+    <line x1="370" y1="400" x2="430" y2="200"/>
+    <line x1="370" y1="400" x2="430" y2="300"/>
+    <line x1="370" y1="400" x2="430" y2="400"/>
+    
+    <!-- BatchNorm to Conv1D (全ての連結) -->
+    <line x1="470" y1="200" x2="530" y2="200"/>
+    <line x1="470" y1="200" x2="530" y2="300"/>
+    <line x1="470" y1="200" x2="530" y2="400"/>
+    <line x1="470" y1="300" x2="530" y2="200"/>
+    <line x1="470" y1="300" x2="530" y2="300"/>
+    <line x1="470" y1="300" x2="530" y2="400"/>
+    <line x1="470" y1="400" x2="530" y2="200"/>
+    <line x1="470" y1="400" x2="530" y2="300"/>
+    <line x1="470" y1="400" x2="530" y2="400"/>
+    
+    <!-- Conv1D to BatchNorm (全ての連結) -->
+    <line x1="570" y1="200" x2="630" y2="200"/>
+    <line x1="570" y1="200" x2="630" y2="300"/>
+    <line x1="570" y1="200" x2="630" y2="400"/>
+    <line x1="570" y1="300" x2="630" y2="200"/>
+    <line x1="570" y1="300" x2="630" y2="300"/>
+    <line x1="570" y1="300" x2="630" y2="400"/>
+    <line x1="570" y1="400" x2="630" y2="200"/>
+    <line x1="570" y1="400" x2="630" y2="300"/>
+    <line x1="570" y1="400" x2="630" y2="400"/>
+    
+    <!-- BatchNorm to MaxPooling1D -->
+    <line x1="670" y1="200" x2="730" y2="250"/>
+    <line x1="670" y1="300" x2="730" y2="250"/>
+    <line x1="670" y1="300" x2="730" y2="350"/>
+    <line x1="670" y1="400" x2="730" y2="350"/>
+    
+    <!-- MaxPooling1D to Dropout -->
+    <line x1="770" y1="250" x2="830" y2="250"/>
+    <line x1="770" y1="250" x2="830" y2="350" stroke-dasharray="5,5"/>
+    <line x1="770" y1="350" x2="830" y2="250"/>
+    <line x1="770" y1="350" x2="830" y2="350" stroke-dasharray="5,5"/>
+    
+    <!-- Dropout to Flatten -->
+    <line x1="870" y1="250" x2="920" y2="300"/>
+    <line x1="870" y1="350" x2="920" y2="300"/>
+    
+    <!-- Flatten to Dense -->
+    <line x1="960" y1="300" x2="980" y2="250"/>
+    <line x1="960" y1="300" x2="980" y2="300"/>
+    <line x1="960" y1="300" x2="980" y2="350"/>
+    
+    <!-- Dense to Dropout -->
+    <line x1="1020" y1="250" x2="1060" y2="250"/>
+    <line x1="1020" y1="250" x2="1060" y2="300" stroke-dasharray="5,5"/>
+    <line x1="1020" y1="250" x2="1060" y2="350"/>
+    <line x1="1020" y1="300" x2="1060" y2="250"/>
+    <line x1="1020" y1="300" x2="1060" y2="300" stroke-dasharray="5,5"/>
+    <line x1="1020" y1="300" x2="1060" y2="350"/>
+    <line x1="1020" y1="350" x2="1060" y2="250"/>
+    <line x1="1020" y1="350" x2="1060" y2="300" stroke-dasharray="5,5"/>
+    <line x1="1020" y1="350" x2="1060" y2="350"/>
+    
+    <!-- Dropout to Output -->
+    <line x1="1100" y1="250" x2="1140" y2="300"/>
+    <line x1="1100" y1="350" x2="1140" y2="300"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+data:
+  input_file: ''
+  output_dir: ''
+  features:
+  target:
+
+model:
+  sequence_length: 24
+  conv_layers:
+    - filters: 64
+      kernel_size: 3
+      activation: relu
+    - filters: 64
+      kernel_size: 3
+      activation: relu
+    - filters: 32
+      kernel_size: 3
+      activation: relu
+  pooling:
+    type: max
+    pool_size: 2
+  dense_layers:
+    - units: 128
+      activation: relu
+  dropout_rate: 0.3
+  output_units: 1
+  output_activation: linear
+
+training:
+  loss: mse
+  optimizer: adam
+  learning_rate: 0.0001
+  epochs: 100
+  batch_size: 64
+  validation_split: 0.1
+  callbacks:
+    early_stopping:
+      monitor: val_loss
+      patience: 15
+      restore_best_weights: true
